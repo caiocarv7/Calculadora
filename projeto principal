@@ -1,0 +1,102 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int soma()
+{
+	int num1;
+	int num2;
+	
+	printf("Digite os n�meros a serem processados: ");
+	scanf("%i%i", &num1, &num2);
+	printf("A soma �: %i\n", num1 + num2);
+	system("pause");
+}
+
+int sub()
+{
+	int num1;
+	int num2;
+	
+	printf("Digite os n�meros a serem processados: ");
+	scanf("%i%i", &num1, &num2);
+	printf("A subtra��o �: %i\n", num1 - num2);
+	system("pause");
+}
+
+int mult()
+{
+	int num1;
+	int num2;
+	
+	printf("Digite os n�meros a serem processados: ");
+	scanf("%i%i", &num1, &num2);
+	printf("O produto �: %i\n", num1 * num2);
+	system("pause");
+}
+
+int div()
+{
+	int num1;
+	int num2;
+	
+	printf("Digite os n�meros a serem processados: ");
+	scanf("%i%i", &num1, &num2);
+	printf("A divis�o �: %i\n", num1 / num2);
+	system("pause");
+}
+
+int main(void)
+{
+	//vari�veis e fun��es
+	int opcao=0;
+	int uso=1;
+	// fim
+	
+	while(uso == 1)
+	{ 
+		setlocale(LC_ALL, "Portuguese");
+		system("cls");		
+		printf("\t ### CALCULADORA ###\n\n");
+		printf("\t 1 - Adi��o\n");
+		printf("\t 2 - Subtra��o\n");
+		printf("\t 3 - Multiplica��o\n");
+		printf("\t 4 - Divis�o\n");
+		printf("\t 5 - Sair\n\n");
+		printf("Favor selecione o que deseja fazer: ");
+		scanf("%i",&opcao);
+		printf("\n");
+	
+		switch(opcao)
+		{
+			case 1:
+				soma();
+			break;
+				
+			case 2:
+				sub();
+			break;
+				
+			case 3:
+				mult();
+			break;
+				
+			case 4:
+				div();
+			break;
+				
+			case 5:
+				printf("Obrigado por utilizar a calculdora!\n\n");
+				system("pause");
+				return 0;
+			break;
+				
+			default:
+				printf("Op��o inv�lida!\n\n");
+				system("pause");
+			break;
+		}
+	}
+	
+	
+}
